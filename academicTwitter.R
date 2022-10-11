@@ -14,8 +14,8 @@ bearer_token = "AAAAAAAAAAAAAAAAAAAAACAreAEAAAAAvFHashRDshTxFe2%2Bu7uAvd%2BYOiI%
 healthcareQuery <- c("Artificial Intelligence Healthcare", "Artificial Intelligence Health Services", "Artificial Intelligence Health Providers", "Artificial Intelligence Pharma", "Artificial Intelligence Life Science", "Artificial Intelligence Insurance", "Artificial Intelligence Consumer Health")
 
 healthcareData <- get_all_tweets(query = healthcareQuery,
-                                start_tweets = "2022-01-01T00:00:00Z",
-                                end_tweets = "2022-03-01T00:00:00Z",
+                                start_tweets = "2019-01-01T00:00:00Z",
+                                end_tweets = "2022-01-01T00:00:00Z",
                                 is_retweet = FALSE,
                                 bearer_token = bearer_token,
                                 n = Inf,
@@ -27,7 +27,7 @@ automotiveQuery <- c("Artificial Intelligence Automotive", "Artificial Intellige
 
 automotiveData <- get_all_tweets(query = automotiveQuery,
                                  start_tweets = "2019-01-01T00:00:00Z",
-                                 end_tweets = "2022-09-01T00:00:00Z",
+                                 end_tweets = "2022-01-01T00:00:00Z",
                                  is_retweet = FALSE,
                                  bearer_token = bearer_token,
                                  n = Inf,
@@ -39,7 +39,7 @@ financeQuery <- c("Artificial Intelligence Financial Services", "Artificial Inte
 
 financeData <- get_all_tweets(query = financeQuery,
                               start_tweets = "2019-01-01T00:00:00Z",
-                              end_tweets = "2022-09-01T00:00:00Z",
+                              end_tweets = "2022-01-01T00:00:00Z",
                               is_retweet = FALSE,
                               bearer_token = bearer_token,
                               n = Inf,
@@ -50,7 +50,7 @@ transportationQuery <- c("Artificial Intelligence Transportation", "Artificial I
 
 transportationData <- get_all_tweets(query = transportationQuery,
                               start_tweets = "2019-01-01T00:00:00Z",
-                              end_tweets = "2022-09-01T00:00:00Z",
+                              end_tweets = "2022-01-01T00:00:00Z",
                               is_retweet = FALSE,
                               bearer_token = bearer_token,
                               n = Inf,
@@ -62,7 +62,7 @@ mediaQuery <- c("Artificial Intelligence Technology", "Artificial Intelligence C
 
 mediaData <- get_all_tweets(query = mediaQuery,
                             start_tweets = "2019-01-01T00:00:00Z",
-                            end_tweets = "2022-09-01T00:00:00Z",
+                            end_tweets = "2022-01-01T00:00:00Z",
                             is_retweet = FALSE,
                             bearer_token = bearer_token,
                             n = Inf,
@@ -74,7 +74,7 @@ retailQuery <- c("Artificial Intelligence Retail", "Artificial Intelligence Cons
 
 retailData <- get_all_tweets(query = retailQuery,
                             start_tweets = "2019-01-01T00:00:00Z",
-                            end_tweets = "2022-09-01T00:00:00Z",
+                            end_tweets = "2022-01-01T00:00:00Z",
                             is_retweet = FALSE,
                             bearer_token = bearer_token,
                             n = Inf,
@@ -86,7 +86,7 @@ energyQuery <- c("Artificial Intelligence Energy", "Artificial Intelligence Oil"
 
 energyData <- get_all_tweets(query = energyQuery,
                              start_tweets = "2019-01-01T00:00:00Z",
-                             end_tweets = "2022-09-01T00:00:00Z",
+                             end_tweets = "2022-01-01T00:00:00Z",
                              is_retweet = FALSE,
                              bearer_token = bearer_token,
                              n = Inf,
@@ -98,7 +98,7 @@ manufacturingQuery <- c("Artificial Intelligence Manufacturing", "Artificial Int
 
 manufacturingData <- get_all_tweets(query = manufacturingQuery,
                                    start_tweets = "2019-01-01T00:00:00Z",
-                                   end_tweets = "2022-09-01T00:00:00Z",
+                                   end_tweets = "2022-01-01T00:00:00Z",
                                    is_retweet = FALSE,
                                    bearer_token = bearer_token,
                                    n = Inf,
