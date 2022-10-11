@@ -75,7 +75,7 @@ retailData <- get_all_tweets(query = retailQuery,
                             lang = "en") %>% select("created_at", "text", "public_metrics", "lang")
 
 
-#### Retail ####
+#### Energy ####
 energyQuery <- c("Artificial Intelligence Energy", "Artificial Intelligence Oil", "Artificial Intelligence Gas", "Artificial Intelligence Power Utilities")
 
 energyData <- get_all_tweets(query = energyQuery,
@@ -86,7 +86,7 @@ energyData <- get_all_tweets(query = energyQuery,
                              lang = "en") %>% select("created_at", "text", "public_metrics", "lang")
 
 
-#### Retail ####
+#### Manufacturing ####
 manufacturingQuery <- c("Artificial Intelligence Manufacturing", "Artificial Intelligence Industrial", "Artificial Intelligence Raw Materials")
 
 manufacturingData <- get_all_tweets(query = manufacturingQuery,
