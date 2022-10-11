@@ -11,7 +11,9 @@ bearer_token = "AAAAAAAAAAAAAAAAAAAAACAreAEAAAAAvFHashRDshTxFe2%2Bu7uAvd%2BYOiI%
 
 #Sys.setenv(BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAJoXhwEAAAAAEL3BzA3ofPsG1%2BoqZWfFfKcOYOE%3DUkEFoumS7lhK5z6lJWBvpFgNrOmW383QDhRhMoW8NWnnhdf2Hh")
 
-scrapedData <- get_all_tweets(query = "blockchain",
+keyword <- c("Artificial Intelligence", "Machine Learning")
+
+scrapedData <- get_all_tweets(query = keyword,
                     start_tweets = "2021-01-01T00:00:00Z",
                     end_tweets = "2021-01-05T00:00:00Z",
                     bearer_token = bearer_token)
