@@ -3,6 +3,7 @@ library(academictwitteR)
 library(tidyverse)
 library(rjson)
 library(jsonlite)
+library(data.table)
 
 
 bearer_token = "AAAAAAAAAAAAAAAAAAAAACAreAEAAAAAvFHashRDshTxFe2%2Bu7uAvd%2BYOiI%3DI6ptSQog0kkUy2lkNgsFN5C7aQ1M3pqB97hJVJA9SpSQtxNCjL"
@@ -11,9 +12,9 @@ bearer_token = "AAAAAAAAAAAAAAAAAAAAACAreAEAAAAAvFHashRDshTxFe2%2Bu7uAvd%2BYOiI%
 
 #### query stuff ####
 fields <- c("created_at", "text", "public_metrics", "lang")
-start <- "2019-01-01T00:00:00Z"
-end <- "2022-01-01T00:00:00Z"
-numberOfTweets <- 1
+start <- "2021-01-01T00:00:00Z"
+end <- "2022-10-01T00:00:00Z"
+numberOfTweets <- Inf
 
 #### Healthcare ####
 healthcareQuery <- c("Artificial Intelligence Healthcare", "Artificial Intelligence Health Services", "Artificial Intelligence Health Providers", "Artificial Intelligence Pharma", "Artificial Intelligence Life Science", "Artificial Intelligence Insurance", "Artificial Intelligence Consumer Health")
@@ -40,7 +41,7 @@ automotiveData <- get_all_tweets(query = automotiveQuery,
 
 
 #### Finance ####
-financeQuery <- c("Artificial Intelligence Financial Services", "Artificial Intelligence Wealth Management", "Artificial Intelligence Banking", "Artificial Intelligence")
+financeQuery <- c("Artificial Intelligence Financial Services", "Artificial Intelligence Wealth Management", "Artificial Intelligence Banking", "Artificial Intelligence Stocks", "Artificial Intelligence Finance")
 
 financeData <- get_all_tweets(query = financeQuery,
                               start_tweets = start,
@@ -63,7 +64,7 @@ transportationData <- get_all_tweets(query = transportationQuery,
 
 
 #### Media ####
-mediaQuery <- c("Artificial Intelligence Technology", "Artificial Intelligence Communication", "Artificial Intelligence Entertainment", "Artificial Intelligence Media")
+mediaQuery <- c("Artificial Intelligence Communication", "Artificial Intelligence Entertainment", "Artificial Intelligence Media")
 
 mediaData <- get_all_tweets(query = mediaQuery,
                             start_tweets = start,
@@ -109,6 +110,8 @@ manufacturingData <- get_all_tweets(query = manufacturingQuery,
                                     n = numberOfTweets,
                                     lang = "en") %>% select(fields) %>% mutate(category = "manufacturing")
 
-#write_json(healthcareData, "healthcareData.json")
-
+#### Compressing and Exporting Data ####
+allTwitterData <- rbind(healthcareData, automotiveData, financeData, transportationData, mediaData, retailData, energyData, manufacturingData)
+#saveRDS(allTwitterData, "aiTweetData21_22_October.rds")
+write.csv(allTwitterData, "aiTweetData21_22_October.csv")
 
