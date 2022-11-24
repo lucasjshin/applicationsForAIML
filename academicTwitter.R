@@ -115,3 +115,5 @@ allTwitterData <- rbind(healthcareData, automotiveData, financeData, transportat
 #saveRDS(allTwitterData, "aiTweetData21_22_October.rds")
 write.csv(allTwitterData, "aiTweetData21_22_October.csv")
 
+
+
